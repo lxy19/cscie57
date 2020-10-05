@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Java1" class="edu.spring.xml.app.Book">
+        <constructor-arg value="1" type="Long"></constructor-arg>
+        <constructor-arg value="123456789" type="String"></constructor-arg>
+        <constructor-arg value="Core Java" type="String"></constructor-arg>
+        <constructor-arg value="34.99" type="Float"></constructor-arg>
+    </bean>
+    <bean id="Java2" class="edu.spring.xml.app.Book">
+        <constructor-arg value="2" type="Long"></constructor-arg>
+        <constructor-arg value="348294923" type="String"></constructor-arg>
+        <constructor-arg value="Effective Java" type="String"></constructor-arg>
+        <constructor-arg value="23.21" type="Float"></constructor-arg>
+    </bean>
+    <bean id="Novel1" class="edu.spring.xml.app.Book">
+        <constructor-arg value="3" type="Long"></constructor-arg>
+        <constructor-arg value="839493203" type="String"></constructor-arg>
+        <constructor-arg value="Ready Player One" type="String"></constructor-arg>
+        <constructor-arg value="12.51" type="Float"></constructor-arg>
+    </bean>
+    <bean id="Novel2" class="edu.spring.xml.app.Book">
+        <constructor-arg value="4" type="Long"></constructor-arg>
+        <constructor-arg value="834673203" type="String"></constructor-arg>
+        <constructor-arg value="Mystery" type="String"></constructor-arg>
+        <constructor-arg value="24.95" type="Float"></constructor-arg>
+    </bean>
+
+    <bean id="categoryMap" class="edu.spring.xml.app.Category">
+        <property name="id" value="1"/>
+        <property name="name" value="Java"/>
+        <property name="map">
+            <map>
+                <entry key="bookMap1" value-ref="Java1"/>
+                <entry key="bookMap2" value-ref="Java2"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="categorySet" class="edu.spring.xml.app.Category">
+        <property name="id" value="2"/>
+        <property name="name" value="Novel"/>
+        <property name="set">
+            <set>
+                <ref bean="Novel1"/>
+                <ref bean="Novel2"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="categoryList" class="edu.spring.xml.app.Category">
+        <property name="id" value="3"/>
+        <property name="name" value="Non-fiction"/>
+        <property name="list">
+            <list>
+                <bean id="Non-fiction1" class="edu.spring.xml.app.Book">
+                    <constructor-arg value="8" type="Long"></constructor-arg>
+                    <constructor-arg value="349252948" type="String"></constructor-arg>
+                    <constructor-arg value="Three Guineas" type="String"></constructor-arg>
+                    <constructor-arg value="11.95" type="Float"></constructor-arg>
+                </bean>
+                <bean id="Non-fiction2" class="edu.spring.xml.app.Book">
+                    <constructor-arg value="9" type="Long"></constructor-arg>
+                    <constructor-arg value="28396403" type="String"></constructor-arg>
+                    <constructor-arg value="Rage" type="String"></constructor-arg>
+                    <constructor-arg value="17.98" type="Float"></constructor-arg>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+</beans>
