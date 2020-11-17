@@ -1,0 +1,43 @@
+insert into category(name) values ('Java');
+insert into category(name) values ('Design Patterns');
+insert into category(name) values ('C/C++');
+insert into category(name) values ('Python');
+insert into category(name) values ('Scala');
+insert into category(name) values ('JavaScript');
+
+insert into book(category_id, isbn, title, price) values (1, '0764543857', 'Expert one-on-one J2EE Design and Development', 59.99);
+insert into book(category_id, isbn, title, price) values (1, '0321349807', 'The Java Programming Language', 31.75);
+insert into book(category_id, isbn, title, price) values (1, '0321349808', 'Head First Java', 18.30);
+insert into book(category_id, isbn, title, price) values (1, '0321349809', 'Murach Java Programming (5th Edition)', 50.14);
+insert into book(category_id, isbn, title, price) values (2, '0321127420', 'Patterns of Enterprise Application Architecture', 52.49);
+insert into book(category_id, isbn, title, price) values (3, '0321349524', 'The C Programming Language(2nd Edition)', 31.83);
+insert into book(category_id, isbn, title, price) values (3, '0321349529', 'C++ Primer(5th Edition)', 55.56);
+insert into book(category_id, isbn, title, price) values (3, '0321349528', 'Murach C++ Programming',59.50);
+insert into book(category_id, isbn, title, price) values (4, '0321349810', 'Python Crash Course', 21.24);
+insert into book(category_id, isbn, title, price) values (5, '1935182706', 'Scala in Depth', 32.48);
+insert into book(category_id, isbn, title, price) values (6, '0321349819', 'Eloquent JavaScript', 25.00);
+
+insert into author (first_name, last_name, description) values('Rod','Johnson', 'an Australian computer specialist who created the Spring Framework and co-founded SpringSource');
+insert into author (first_name, last_name, description) values('Ken','Arnold', 'an American computer programmer well known as one of the developers of the 1980s');
+insert into author (first_name, last_name, description) values('Kathy','Sierra', 'She created the award-winning Head First programming book series that has sold over 1 million copies.');
+insert into author (first_name, last_name, description) values('Joel','Murach', 'He has written extensively on a wide range of Java, .NET, web, and database technologies.');
+insert into author (first_name, last_name, description) values('Martin','Fowler', 'a British software developer, author and international public speaker on software development');
+insert into author (first_name, last_name, description) values('Brian','Kernighan', 'a computer scientist who worked at Bell Labs alongside Unix creators');
+insert into author (first_name, last_name, description) values('Stanley','Lippman', 'He has worked with Bjarne Stroustrup in Bell Laboratories during early stages of C++');
+insert into author (first_name, last_name, description) values('Eric','Matthes', 'He teaches high school math and science at a small school in southeast Alaska.');
+insert into author (first_name, last_name, description) values('Josh','Suereth', 'a Staff Software Engineer at Google LLC');
+insert into author (first_name, last_name, description) values('Marijn','Haverbeke', 'a programmer and tech writer in Berlin');
+insert into author (first_name, last_name, description) values('Martin','Odersky', 'a German computer scientist and professor of programming methods');
+
+insert into author_book(author_id, book_id) values (1,1);
+insert into author_book(author_id, book_id) values (2,2);
+insert into author_book(author_id, book_id) values (3,3);
+insert into author_book(author_id, book_id) values (4,4);
+insert into author_book(author_id, book_id) values (5,5);
+insert into author_book(author_id, book_id) values (6,6);
+insert into author_book(author_id, book_id) values (4,7);
+insert into author_book(author_id, book_id) values (7,8);
+insert into author_book(author_id, book_id) values (8,9);
+insert into author_book(author_id, book_id) values (9,10);
+insert into author_book(author_id, book_id) values(11, 10);
+insert into author_book(author_id, book_id) values (10,11);
